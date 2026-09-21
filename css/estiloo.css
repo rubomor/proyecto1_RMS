@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f3f9ff, #fdfdfd);
+    color: #243b53;
+}
+
+.cabecera {
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+.cabecera h1,
+.titulo-horario {
+    margin: 0;
+    color: #3f6f8f;
+    font-size: 2.3rem;
+    letter-spacing: 0.03em;
+}
+
+.menu-navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 18px;
+    flex-wrap: wrap;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: #3f6f8f;
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-weight: 600;
+    background: #edf7ff;
+    border: 1px solid #d6ebf7;
+    transition: all 0.2s ease;
+}
+
+.menu-navegacion a:hover {
+    background: #dfeefb;
+}
+
+.formulario,
+.contenedor-inicio,
+.contenedor-horario {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+fieldset,
+.panel {
+    border: 1px solid #d6ebf7;
+    border-radius: 16px;
+    background: #ffffff;
+    padding: 28px;
+    box-shadow: 0 6px 18px rgba(63, 111, 143, 0.08);
+}
+
+legend,
+.panel h2 {
+    padding: 0 10px;
+    color: #3f6f8f;
+    font-weight: 700;
+}
+
+label {
+    display: block;
+    margin-top: 16px;
+    margin-bottom: 8px;
+    color: #4a6173;
+    font-weight: 600;
+}
+
+input,
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid #d6ebf7;
+    border-radius: 10px;
+    background: #f9fcff;
+    color: #243b53;
+    font-size: 1rem;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #8ecae6;
+    box-shadow: 0 0 0 3px rgba(142, 202, 230, 0.2);
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    width: auto;
+    display: block;
+    margin: 22px auto 0;
+    background: #9ed5e8;
+    color: #214a62;
+    border: none;
+    padding: 11px 26px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background: #87c9e4;
+}
+
+.panel {
+    padding: 30px;
+}
+
+.panel p,
+.lista-inicio {
+    color: #445b6b;
+    line-height: 1.7;
+}
+
+.lista-inicio {
+    padding-left: 20px;
+}
+
+.panel a {
+    color: #3f6f8f;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.panel a:hover {
+    text-decoration: underline;
+}
+
+.titulo-horario {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contenedor-horario {
+    background: #ffffff;
+    border: 1px solid #d6ebf7;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(63, 111, 143, 0.08);
+}
+
+.tabla-horario {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.tabla-horario th,
+.tabla-horario td {
+    border: 1px solid #d6ebf7;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0;
+    height: 96px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.tabla-horario thead th {
+    background: #bfe3f3;
+    color: #234d67;
+    height: 58px;
+}
+
+.tabla-horario .hora {
+    width: 120px;
+    background: #f7fbff;
+    color: #375669;
+    font-weight: 600;
+}
+
+.tabla-horario td span {
+    display: block;
+    padding: 10px 8px;
+}
+
+.rosa { background: #fde7ef; color: #b23a5c; }
+.rosa-claro { background: #fff1f5; color: #b23a5c; }
+.verde { background: #e8f9f2; color: #1a7567; }
+.azul { background: #e5f2ff; color: #2d6ec9; }
+.lila { background: #f0ebff; color: #6647b8; }
+.morado { background: #f2eafc; color: #7b4cb4; }
+.amarillo { background: #fff8d9; color: #af7a00; }
+.gris { background: #f3f6f9; color: #4a5868; }
+.blanco { background: #ffffff; }
+
+.tabla-horario .recreo {
+    background: #dff0f8;
+    color: #345d74;
+    letter-spacing: 0.18em;
+}
+
+@media (max-width: 700px) {
+    .tabla-horario th,
+    .tabla-horario td {
+        min-width: 120px;
+        font-size: 0.9rem;
+        height: 80px;
+    }
+}
