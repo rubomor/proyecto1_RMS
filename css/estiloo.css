@@ -117,6 +117,15 @@ input[type="submit"]:hover {
     padding: 30px;
 }
 
+.imagen-portada {
+    display: block;
+    width: min(100%, 768px);
+    height: auto;
+    margin: 0 auto 24px;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(36, 59, 83, 0.18);
+}
+
 .panel p,
 .lista-inicio {
     color: #445b6b;
