@@ -1,0 +1,92 @@
+/* Marco exterior (tabla con borde azul) */
+.menu-navegacion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 0 0 16px;
+    font-family: Arial, sans-serif;
+}
+
+.menu-navegacion a {
+    text-decoration: none;
+    color: #374151;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 9px 16px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.menu-navegacion a:hover {
+    background: #f9fafb;
+}
+
+.marco {
+    width: 100%;
+    border: 2px solid #4472c4;
+    border-collapse: collapse;
+    font-family: "Times New Roman", serif;
+}
+
+.marco td {
+    padding: 8px;
+}
+
+/* Encabezados */
+h1 {
+    font-size: 24px;
+}
+
+h2 {
+    font-size: 18px;
+    color: red;
+    font-style: italic;
+}
+
+/* Imagen centrada */
+.imagen {
+    text-align: center;
+}
+
+.imagen img {
+    width: 180px;
+}
+
+/* Párrafo */
+.parrafo {
+    font-family: Verdana, sans-serif;
+    font-size: 30px;
+}
+
+.resaltado {
+    background-color: yellow;
+}
+
+.subrayado {
+    text-decoration: underline;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+/* Línea separadora */
+hr {
+    border: none;
+    border-top: 1px solid #555555;
+}
+
+/* Tablita del hipervínculo */
+.pie {
+    width: 100%;
+    background-color: #dddddd;
+    border: 2px solid blue;
+    border-collapse: collapse;
+}
+
+.marco .pie td {
+    padding: 2px;
+    font-size: 12px;
+}
