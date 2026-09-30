@@ -1,45 +1,49 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    padding: 40px 20px;
+    padding: 32px 18px 48px;
     font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #f3f9ff, #fdfdfd);
-    color: #243b53;
+    background: #f3f4f6;
+    color: #1f2937;
 }
 
 .cabecera {
+    max-width: 1100px;
+    margin: 0 auto 22px;
     text-align: center;
-    margin-bottom: 24px;
 }
 
 .cabecera h1,
 .titulo-horario {
-    margin: 0;
-    color: #3f6f8f;
-    font-size: 2.3rem;
-    letter-spacing: 0.03em;
+    margin: 0 0 16px;
+    color: #1f2937;
+    font-size: 2rem;
+    letter-spacing: 0.04em;
 }
 
 .menu-navegacion {
     display: flex;
     justify-content: center;
-    gap: 14px;
-    margin-top: 18px;
+    gap: 10px;
     flex-wrap: wrap;
 }
 
 .menu-navegacion a {
     text-decoration: none;
-    color: #3f6f8f;
-    padding: 8px 14px;
-    border-radius: 999px;
+    color: #374151;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 9px 16px;
     font-weight: 600;
-    background: #edf7ff;
-    border: 1px solid #d6ebf7;
-    transition: all 0.2s ease;
+    transition: background 0.2s ease;
 }
 
 .menu-navegacion a:hover {
-    background: #dfeefb;
+    background: #f9fafb;
 }
 
 .formulario,
@@ -51,25 +55,23 @@ body {
 
 fieldset,
 .panel {
-    border: 1px solid #d6ebf7;
-    border-radius: 16px;
     background: #ffffff;
-    padding: 28px;
-    box-shadow: 0 6px 18px rgba(63, 111, 143, 0.08);
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 24px;
 }
 
 legend,
 .panel h2 {
-    padding: 0 10px;
-    color: #3f6f8f;
+    padding: 0 8px;
+    color: #374151;
     font-weight: 700;
 }
 
 label {
     display: block;
-    margin-top: 16px;
-    margin-bottom: 8px;
-    color: #4a6173;
+    margin: 16px 0 8px;
+    color: #4b5563;
     font-weight: 600;
 }
 
@@ -77,19 +79,19 @@ input,
 textarea {
     width: 100%;
     box-sizing: border-box;
-    padding: 11px 12px;
-    border: 1px solid #d6ebf7;
-    border-radius: 10px;
-    background: #f9fcff;
-    color: #243b53;
+    padding: 10px 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #111827;
     font-size: 1rem;
 }
 
 input:focus,
 textarea:focus {
     outline: none;
-    border-color: #8ecae6;
-    box-shadow: 0 0 0 3px rgba(142, 202, 230, 0.2);
+    border-color: #9ca3af;
+    box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.15);
 }
 
 textarea {
@@ -98,46 +100,47 @@ textarea {
 }
 
 input[type="submit"] {
-    width: auto;
     display: block;
+    width: auto;
     margin: 22px auto 0;
-    background: #9ed5e8;
-    color: #214a62;
+    padding: 10px 22px;
     border: none;
-    padding: 11px 26px;
+    border-radius: 8px;
+    background: #374151;
+    color: #ffffff;
     font-weight: 700;
     cursor: pointer;
 }
 
 input[type="submit"]:hover {
-    background: #87c9e4;
+    background: #1f2937;
 }
 
 .panel {
-    padding: 30px;
+    padding: 28px;
 }
 
 .imagen-portada {
     display: block;
-    width: min(100%, 768px);
+    width: min(100%, 700px);
     height: auto;
-    margin: 0 auto 24px;
-    border-radius: 12px;
-    box-shadow: 0 8px 22px rgba(36, 59, 83, 0.18);
+    margin: 0 auto 20px;
+    border-radius: 10px;
 }
 
 .panel p,
 .lista-inicio {
-    color: #445b6b;
-    line-height: 1.7;
+    color: #4b5563;
+    line-height: 1.6;
 }
 
 .lista-inicio {
-    padding-left: 20px;
+    padding-left: 18px;
+    margin: 18px 0;
 }
 
 .panel a {
-    color: #3f6f8f;
+    color: #1f2937;
     font-weight: 700;
     text-decoration: none;
 }
@@ -153,10 +156,9 @@ input[type="submit"]:hover {
 
 .contenedor-horario {
     background: #ffffff;
-    border: 1px solid #d6ebf7;
-    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 6px 18px rgba(63, 111, 143, 0.08);
 }
 
 .tabla-horario {
@@ -167,25 +169,25 @@ input[type="submit"]:hover {
 
 .tabla-horario th,
 .tabla-horario td {
-    border: 1px solid #d6ebf7;
+    border: 1px solid #e5e7eb;
     text-align: center;
     vertical-align: middle;
     padding: 0;
-    height: 96px;
+    height: 92px;
     font-weight: 700;
     font-size: 1rem;
 }
 
 .tabla-horario thead th {
-    background: #bfe3f3;
-    color: #234d67;
-    height: 58px;
+    background: #f3f4f6;
+    color: #374151;
+    height: 54px;
 }
 
 .tabla-horario .hora {
     width: 120px;
-    background: #f7fbff;
-    color: #375669;
+    background: #fafafa;
+    color: #4b5563;
     font-weight: 600;
 }
 
@@ -194,27 +196,31 @@ input[type="submit"]:hover {
     padding: 10px 8px;
 }
 
-.rosa { background: #fde7ef; color: #b23a5c; }
-.rosa-claro { background: #fff1f5; color: #b23a5c; }
-.verde { background: #e8f9f2; color: #1a7567; }
-.azul { background: #e5f2ff; color: #2d6ec9; }
-.lila { background: #f0ebff; color: #6647b8; }
-.morado { background: #f2eafc; color: #7b4cb4; }
-.amarillo { background: #fff8d9; color: #af7a00; }
-.gris { background: #f3f6f9; color: #4a5868; }
+.rosa { background: #fff1f2; color: #9f1239; }
+.rosa-claro { background: #fff7ed; color: #9f1239; }
+.verde { background: #ecfdf5; color: #065f46; }
+.azul { background: #eff6ff; color: #1d4ed8; }
+.lila { background: #f5f3ff; color: #6d28d9; }
+.morado { background: #faf5ff; color: #7c3aed; }
+.amarillo { background: #fefce8; color: #a16207; }
+.gris { background: #f9fafb; color: #4b5563; }
 .blanco { background: #ffffff; }
 
 .tabla-horario .recreo {
-    background: #dff0f8;
-    color: #345d74;
-    letter-spacing: 0.18em;
+    background: #f3f4f6;
+    color: #374151;
+    letter-spacing: 0.12em;
 }
 
 @media (max-width: 700px) {
+    body {
+        padding: 20px 12px 32px;
+    }
+
     .tabla-horario th,
     .tabla-horario td {
         min-width: 120px;
         font-size: 0.9rem;
-        height: 80px;
+        height: 78px;
     }
 }
