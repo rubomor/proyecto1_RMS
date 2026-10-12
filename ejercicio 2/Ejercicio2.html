@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2: Listas</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <main>
+        <h1>Ejercicio 1:</h1>
+        <p class="instrucciones">Intenta crear una página HTML con las siguientes listas:</p>
+
+        <section class="bloque-lista" aria-labelledby="titulo-no-ordenada">
+            <h2 id="titulo-no-ordenada">lista no ordenada</h2>
+            <ul>
+                <li>opcion1</li>
+                <li>opcion2
+                    <ul>
+                        <li>opcion21</li>
+                        <li>opcion22</li>
+                    </ul>
+                </li>
+                <li>opcion3</li>
+                <li>opcion4</li>
+                <li>opcion5</li>
+            </ul>
+        </section>
+
+        <hr>
+
+        <section class="bloque-lista" aria-labelledby="titulo-ordenada">
+            <h2 id="titulo-ordenada">lista ordenada</h2>
+            <ol>
+                <li>opcion1</li>
+                <li>opcion2
+                    <ul>
+                        <li>opcion21</li>
+                        <li>opcion22</li>
+                    </ul>
+                </li>
+                <li>opcion3</li>
+                <li>opcion4
+                    <ol type="a">
+                        <li>opcion41
+                            <ol type="i">
+                                <li>opcion411</li>
+                                <li>opcion412</li>
+                            </ol>
+                        </li>
+                        <li>opcion42</li>
+                    </ol>
+                </li>
+                <li>opcion5</li>
+            </ol>
+        </section>
+
+        <hr>
+
+        <p class="volver"><a href="index.html">Volver al índice del Ejercicio 2</a></p>
+    </main>
+</body>
+</html>

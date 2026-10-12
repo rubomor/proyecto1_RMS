@@ -1,0 +1,82 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 26px 3.5%;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+main {
+    width: 100%;
+}
+
+h1 {
+    margin: 0 0 20px;
+    font-size: 20px;
+}
+
+.instrucciones {
+    margin: 0 0 24px;
+    font-size: 20px;
+}
+
+.bloque-lista h2 {
+    margin: 0;
+    padding: 7px 12px;
+    border-radius: 8px;
+    background-color: #61d4e9;
+    font-size: 11px;
+    font-style: italic;
+    text-align: center;
+}
+
+.bloque-lista ul,
+.bloque-lista ol {
+    margin: 10px 0;
+    padding-left: 28px;
+    font-family: "Times New Roman", serif;
+    font-size: 13px;
+}
+
+.bloque-lista > ul {
+    list-style-type: circle;
+}
+
+.bloque-lista ul ul,
+.bloque-lista ol ul,
+.bloque-lista ol ol {
+    margin: 0;
+    padding-left: 28px;
+}
+
+.bloque-lista ol ul {
+    list-style-type: square;
+}
+
+hr {
+    margin: 12px 0 10px;
+    border: 0;
+    border-top: 1px solid #888;
+}
+
+.volver {
+    margin-top: 18px;
+    font-size: 14px;
+}
+
+.volver a {
+    color: #075a75;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 20px 5%;
+    }
+
+    .instrucciones {
+        font-size: 18px;
+    }
+}

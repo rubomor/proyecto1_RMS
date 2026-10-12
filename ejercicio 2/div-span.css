@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 8px 0.6% 24px;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+.instrucciones {
+    margin: 0 0 14px;
+    font-size: 20px;
+}
+
+.pagina-ejercicio {
+    min-height: 360px;
+    padding: 18px 3%;
+    border-left: 4px solid #111;
+    background: url("banderahispana.jpeg") center 43% / cover no-repeat;
+    font-family: "Times New Roman", serif;
+}
+
+.bloque-div {
+    min-height: 226px;
+    padding: 22px 14px 14px;
+    color: #fff;
+    background-color: rgba(91, 111, 128, 0.82);
+}
+
+.bloque-div h1 {
+    margin: 0 0 22px;
+    font-size: 23px;
+}
+
+.bloque-div p,
+.bloque-span p {
+    margin: 0 0 12px;
+    font-size: 13px;
+    line-height: 1.15;
+}
+
+.bloque-span {
+    margin-top: 20px;
+    padding: 14px;
+    background-color: rgba(245, 241, 190, 0.78);
+}
+
+.bloque-span p {
+    margin: 0;
+}
+
+.resaltado {
+    background-color: #ee86c4;
+}
+
+.negrita {
+    background-color: #d6d6b4;
+    font-weight: bold;
+}
+
+.volver {
+    margin: 16px 0 0;
+    font-size: 14px;
+}
+
+.volver a {
+    color: #075a75;
+}
+
+@media (max-width: 600px) {
+    body {
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+
+    .instrucciones {
+        font-size: 18px;
+    }
+
+    .pagina-ejercicio {
+        padding: 14px 4%;
+        background-position: center;
+    }
+
+    .bloque-div {
+        padding: 18px 12px 10px;
+    }
+}

@@ -1,0 +1,24 @@
+h2 {
+	color: red;
+}
+
+img {
+	display: block;
+	margin: 0 auto;
+}
+
+fieldset {
+    border-color: #0074f9;
+    
+}
+
+.borde {
+    border-color: #1100f9;
+    background-color: rgb(218, 208, 208);
+    padding: 5px 10px;
+    height: 35px;
+}
+
+.borde p {
+    margin: 8px 0;
+}
