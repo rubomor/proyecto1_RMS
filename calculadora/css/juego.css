@@ -1,0 +1,136 @@
+:root {
+    --bg: #f4f7fb;
+    --panel: #ffffff;
+    --primary: #4f46e5;
+    --primary-dark: #3730a3;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --success: #16a34a;
+    --danger: #dc2626;
+    --border: #e5e7eb;
+    --shadow: 0 10px 25px rgba(31, 41, 55, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #eef2ff 0%, #f8fafc 100%);
+    color: var(--text);
+}
+
+main {
+    width: min(90vw, 520px);
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+}
+
+.instrucciones {
+    margin-top: 0;
+    color: var(--muted);
+}
+
+main > p:last-child a {
+    color: var(--primary-dark);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+main > p:last-child a:hover {
+    text-decoration: underline;
+}
+
+.opciones {
+    display: flex;
+    justify-content: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    margin: 1.5rem 0;
+}
+
+button {
+    border: none;
+    background: var(--primary);
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.15s ease, background 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 6px 14px rgba(79, 70, 229, 0.2);
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-1px);
+}
+
+#resultado {
+    margin-top: 1.5rem;
+    background: #f8fafc;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+#resultado h2 {
+    margin-top: 0;
+}
+
+#mensaje {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--success);
+    margin-bottom: 0;
+}
+
+#marcador,
+#ganadas,
+#empatadas,
+#perdidas {
+    margin: 0.4rem 0;
+    font-weight: 600;
+}
+
+#ganadas {
+    color: var(--success);
+}
+
+#empatadas {
+    color: #b45309;
+}
+
+#perdidas {
+    color: var(--danger);
+}
+
+@media (max-width: 480px) {
+    main {
+        padding: 1.5rem 1rem;
+    }
+
+    .opciones {
+        gap: 0.5rem;
+    }
+
+    button {
+        flex: 1 1 100%;
+    }
+}

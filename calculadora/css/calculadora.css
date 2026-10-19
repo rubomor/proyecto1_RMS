@@ -1,0 +1,100 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: grid;
+    place-items: center;
+    padding: 24px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    color: #1f2937;
+}
+
+.calculadora {
+    width: min(100%, 360px);
+    padding: 28px;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 12px 32px rgba(31, 41, 55, 0.12);
+}
+
+.calculadora h1 {
+    margin: 0 0 18px;
+    text-align: center;
+    font-size: 1.7rem;
+}
+
+.teclado {
+    border-spacing: 8px;
+    table-layout: fixed;
+    margin: -8px;
+    width: calc(100% + 16px);
+}
+
+.teclado td {
+    padding: 0;
+}
+
+#pantalla {
+    width: 100%;
+    height: 64px;
+    padding: 12px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #f9fafb;
+    color: #111827;
+    font-size: 1.8rem;
+    text-align: right;
+}
+
+.teclado button {
+    width: 100%;
+    min-height: 52px;
+    border: 0;
+    border-radius: 10px;
+    background: #eef2ff;
+    color: #312e81;
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s ease, transform 0.15s ease;
+}
+
+.teclado button:hover {
+    background: #c7d2fe;
+    transform: translateY(-1px);
+}
+
+.teclado tr:last-child button {
+    background: #fee2e2;
+    color: #991b1b;
+}
+
+.teclado tr:last-child button:hover {
+    background: #fecaca;
+}
+
+.volver {
+    margin: 20px 0 0;
+    text-align: center;
+}
+
+.volver a {
+    color: #4338ca;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.volver a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 380px) {
+    .calculadora {
+        padding: 22px 18px;
+    }
+}

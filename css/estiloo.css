@@ -46,6 +46,24 @@ body {
     background: #f9fafb;
 }
 
+.grupo-ejercicios,
+.grupo-javascript {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 5px 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    background: #e5e7eb;
+}
+
+.grupo-ejercicios span,
+.grupo-javascript span {
+    color: #374151;
+    font-weight: 700;
+}
+
 .formulario,
 .contenedor-inicio,
 .contenedor-horario {
