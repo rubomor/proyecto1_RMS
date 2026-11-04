@@ -2,48 +2,70 @@
     box-sizing: border-box;
 }
 
+:root {
+    color-scheme: light;
+    --azul: #3977c3;
+    --azul-oscuro: #24558f;
+    --azul-claro: #eaf4ff;
+    --azul-borde: #d3e6fb;
+    --texto: #26384d;
+    --texto-suave: #60748a;
+    --blanco: #ffffff;
+}
+
 body {
     margin: 0;
-    padding: 32px 18px 48px;
-    font-family: Arial, sans-serif;
-    background: #f3f4f6;
-    color: #1f2937;
+    padding: 48px 20px 64px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #edf6ff 0, #f7fbff 280px, #f5f9fd 100%);
+    color: var(--texto);
 }
 
 .cabecera {
     max-width: 1100px;
-    margin: 0 auto 22px;
+    margin: 0 auto 28px;
+    padding: 28px 24px;
     text-align: center;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(211, 230, 251, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(58, 103, 151, 0.08);
 }
 
 .cabecera h1,
 .titulo-horario {
-    margin: 0 0 16px;
-    color: #1f2937;
-    font-size: 2rem;
-    letter-spacing: 0.04em;
+    margin: 0 0 22px;
+    color: var(--azul-oscuro);
+    font-size: clamp(1.7rem, 4vw, 2.25rem);
+    letter-spacing: 0.06em;
 }
 
 .menu-navegacion {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 10px;
     flex-wrap: wrap;
 }
 
 .menu-navegacion a {
     text-decoration: none;
-    color: #374151;
-    background: #ffffff;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
+    color: var(--azul-oscuro);
+    background: var(--blanco);
+    border: 1px solid var(--azul-borde);
+    border-radius: 999px;
     padding: 9px 16px;
     font-weight: 600;
-    transition: background 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.menu-navegacion a:hover {
-    background: #f9fafb;
+.menu-navegacion > a:hover,
+.menu-navegacion > a:focus-visible {
+    color: #ffffff;
+    background: var(--azul);
+    border-color: var(--azul);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(57, 119, 195, 0.2);
 }
 
 .grupo-ejercicios,
@@ -51,17 +73,34 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 7px;
+    flex-wrap: wrap;
     padding: 5px 8px;
-    border: 1px solid #d1d5db;
-    border-radius: 10px;
-    background: #e5e7eb;
+    border: 1px solid var(--azul-borde);
+    border-radius: 999px;
+    background: var(--azul-claro);
 }
 
 .grupo-ejercicios span,
 .grupo-javascript span {
-    color: #374151;
+    padding: 0 5px;
+    color: var(--azul-oscuro);
+    font-size: 0.9rem;
     font-weight: 700;
+}
+
+.grupo-ejercicios a,
+.grupo-javascript a {
+    padding: 7px 12px;
+    font-size: 0.9rem;
+}
+
+.grupo-ejercicios a:hover,
+.grupo-ejercicios a:focus-visible,
+.grupo-javascript a:hover,
+.grupo-javascript a:focus-visible {
+    background: #d8eaff;
+    border-color: #b7d5f6;
 }
 
 .formulario,
@@ -73,110 +112,129 @@ body {
 
 fieldset,
 .panel {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    padding: 24px;
+    background: var(--blanco);
+    border: 1px solid var(--azul-borde);
+    border-radius: 18px;
+    padding: 28px;
+    box-shadow: 0 12px 30px rgba(58, 103, 151, 0.08);
+}
+
+fieldset {
+    max-width: 760px;
+    margin: 0 auto;
 }
 
 legend,
 .panel h2 {
     padding: 0 8px;
-    color: #374151;
+    color: var(--azul-oscuro);
     font-weight: 700;
 }
 
 label {
     display: block;
-    margin: 16px 0 8px;
-    color: #4b5563;
+    margin: 18px 0 8px;
+    color: var(--texto-suave);
     font-weight: 600;
 }
 
 input,
 textarea {
     width: 100%;
-    box-sizing: border-box;
-    padding: 10px 12px;
-    border: 1px solid #d1d5db;
-    border-radius: 8px;
-    background: #ffffff;
-    color: #111827;
-    font-size: 1rem;
+    padding: 11px 13px;
+    border: 1px solid #cbdced;
+    border-radius: 10px;
+    background: #fbfdff;
+    color: var(--texto);
+    font: inherit;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 input:focus,
 textarea:focus {
     outline: none;
-    border-color: #9ca3af;
-    box-shadow: 0 0 0 2px rgba(156, 163, 175, 0.15);
+    border-color: #78a9e3;
+    box-shadow: 0 0 0 4px rgba(120, 169, 227, 0.18);
 }
 
 textarea {
-    min-height: 110px;
+    min-height: 120px;
     resize: vertical;
 }
 
 input[type="submit"] {
     display: block;
     width: auto;
-    margin: 22px auto 0;
-    padding: 10px 22px;
+    margin: 24px auto 0;
+    padding: 11px 26px;
     border: none;
-    border-radius: 8px;
-    background: #374151;
-    color: #ffffff;
+    border-radius: 999px;
+    background: var(--azul);
+    color: var(--blanco);
     font-weight: 700;
     cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 input[type="submit"]:hover {
-    background: #1f2937;
+    background: var(--azul-oscuro);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 14px rgba(57, 119, 195, 0.22);
 }
 
 .panel {
-    padding: 28px;
+    padding: 32px;
 }
 
 .imagen-portada {
     display: block;
     width: min(100%, 700px);
     height: auto;
-    margin: 0 auto 20px;
-    border-radius: 10px;
+    margin: 0 auto 24px;
+    border: 5px solid #f0f7ff;
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(38, 77, 120, 0.14);
 }
 
 .panel p,
 .lista-inicio {
-    color: #4b5563;
-    line-height: 1.6;
+    color: var(--texto-suave);
+    line-height: 1.7;
 }
 
 .lista-inicio {
-    padding-left: 18px;
-    margin: 18px 0;
+    padding: 16px 22px 16px 40px;
+    margin: 20px 0;
+    border-radius: 12px;
+    background: #f2f8ff;
+}
+
+.lista-inicio li {
+    padding: 3px 0;
 }
 
 .panel a {
-    color: #1f2937;
+    color: var(--azul);
     font-weight: 700;
     text-decoration: none;
 }
 
 .panel a:hover {
+    color: var(--azul-oscuro);
     text-decoration: underline;
 }
 
 .titulo-horario {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .contenedor-horario {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 12px;
-    overflow: hidden;
+    overflow-x: auto;
+    background: var(--blanco);
+    border: 1px solid var(--azul-borde);
+    border-radius: 16px;
+    box-shadow: 0 12px 30px rgba(58, 103, 151, 0.08);
 }
 
 .tabla-horario {
@@ -187,25 +245,25 @@ input[type="submit"]:hover {
 
 .tabla-horario th,
 .tabla-horario td {
-    border: 1px solid #e5e7eb;
+    border: 1px solid #e1edf8;
     text-align: center;
     vertical-align: middle;
     padding: 0;
-    height: 92px;
+    height: 88px;
     font-weight: 700;
-    font-size: 1rem;
+    font-size: 0.96rem;
 }
 
 .tabla-horario thead th {
-    background: #f3f4f6;
-    color: #374151;
-    height: 54px;
+    background: #e8f3ff;
+    color: var(--azul-oscuro);
+    height: 56px;
 }
 
 .tabla-horario .hora {
     width: 120px;
-    background: #fafafa;
-    color: #4b5563;
+    background: #f6faff;
+    color: var(--texto-suave);
     font-weight: 600;
 }
 
@@ -214,31 +272,64 @@ input[type="submit"]:hover {
     padding: 10px 8px;
 }
 
-.rosa { background: #fff1f2; color: #9f1239; }
-.rosa-claro { background: #fff7ed; color: #9f1239; }
-.verde { background: #ecfdf5; color: #065f46; }
-.azul { background: #eff6ff; color: #1d4ed8; }
-.lila { background: #f5f3ff; color: #6d28d9; }
-.morado { background: #faf5ff; color: #7c3aed; }
-.amarillo { background: #fefce8; color: #a16207; }
-.gris { background: #f9fafb; color: #4b5563; }
+.rosa { background: #eff7ff; color: #315d8c; }
+.rosa-claro { background: #f5faff; color: #426d9b; }
+.verde { background: #eaf5ff; color: #315d8c; }
+.azul { background: #deedff; color: #24558f; }
+.lila { background: #f0f6ff; color: #3d6391; }
+.morado { background: #e7f2ff; color: #315d8c; }
+.amarillo { background: #f3f8ff; color: #426d9b; }
+.gris { background: #f7fbff; color: #506b86; }
 .blanco { background: #ffffff; }
 
 .tabla-horario .recreo {
-    background: #f3f4f6;
-    color: #374151;
+    background: #dcecff;
+    color: var(--azul-oscuro);
     letter-spacing: 0.12em;
 }
 
 @media (max-width: 700px) {
     body {
-        padding: 20px 12px 32px;
+        padding: 24px 12px 36px;
+    }
+
+    .cabecera {
+        padding: 22px 14px;
+        margin-bottom: 20px;
+        border-radius: 16px;
+    }
+
+    .menu-navegacion {
+        gap: 8px;
+    }
+
+    .grupo-ejercicios,
+    .grupo-javascript {
+        border-radius: 14px;
+    }
+
+    fieldset,
+    .panel {
+        padding: 22px 18px;
+        border-radius: 14px;
+    }
+
+    .tabla-horario {
+        min-width: 760px;
     }
 
     .tabla-horario th,
     .tabla-horario td {
-        min-width: 120px;
         font-size: 0.9rem;
-        height: 78px;
+        height: 76px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
     }
 }
