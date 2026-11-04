@@ -13,6 +13,11 @@ body {
     color: #1f2937;
 }
 
+:root[data-tema="oscuro"] body {
+    background: linear-gradient(135deg, #172638, #24364a);
+    color: #e4edf7;
+}
+
 .calculadora {
     width: min(100%, 360px);
     padding: 28px;
@@ -22,10 +27,46 @@ body {
     box-shadow: 0 12px 32px rgba(31, 41, 55, 0.12);
 }
 
+:root[data-tema="oscuro"] .calculadora {
+    border-color: #3a526c;
+    background: #1d2b3b;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.24);
+}
+
 .calculadora h1 {
     margin: 0 0 18px;
     text-align: center;
     font-size: 1.7rem;
+}
+
+.alternador-tema {
+    display: block;
+    margin: 0 0 18px auto;
+    padding: 8px 14px;
+    border: 1px solid #d3e6fb;
+    border-radius: 999px;
+    background: #ffffff;
+    color: #24558f;
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.alternador-tema:hover,
+.alternador-tema:focus-visible {
+    background: #eaf4ff;
+}
+
+:root[data-tema="oscuro"] .alternador-tema {
+    border-color: #3a526c;
+    background: #263d57;
+    color: #c4ddfb;
+}
+
+:root[data-tema="oscuro"] .alternador-tema:hover,
+:root[data-tema="oscuro"] .alternador-tema:focus-visible {
+    background: #365473;
 }
 
 .teclado {
@@ -51,6 +92,12 @@ body {
     text-align: right;
 }
 
+:root[data-tema="oscuro"] #pantalla {
+    border-color: #455d75;
+    background: #172536;
+    color: #e4edf7;
+}
+
 .teclado button {
     width: 100%;
     min-height: 52px;
@@ -64,9 +111,18 @@ body {
     transition: background 0.15s ease, transform 0.15s ease;
 }
 
+:root[data-tema="oscuro"] .teclado button {
+    background: #2b4562;
+    color: #e4edf7;
+}
+
 .teclado button:hover {
     background: #c7d2fe;
     transform: translateY(-1px);
+}
+
+:root[data-tema="oscuro"] .teclado button:hover {
+    background: #365473;
 }
 
 .teclado tr:last-child button {
@@ -74,8 +130,17 @@ body {
     color: #991b1b;
 }
 
+:root[data-tema="oscuro"] .teclado tr:last-child button {
+    background: #57383d;
+    color: #ffd5dc;
+}
+
 .teclado tr:last-child button:hover {
     background: #fecaca;
+}
+
+:root[data-tema="oscuro"] .teclado tr:last-child button:hover {
+    background: #70464d;
 }
 
 .volver {
@@ -87,6 +152,10 @@ body {
     color: #4338ca;
     font-weight: 600;
     text-decoration: none;
+}
+
+:root[data-tema="oscuro"] .volver a {
+    color: #c4ddfb;
 }
 
 .volver a:hover {

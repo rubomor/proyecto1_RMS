@@ -11,6 +11,20 @@
     --shadow: 0 10px 25px rgba(31, 41, 55, 0.08);
 }
 
+:root[data-tema="oscuro"] {
+    color-scheme: dark;
+    --bg: #172638;
+    --panel: #1d2b3b;
+    --primary: #527fb2;
+    --primary-dark: #3e638f;
+    --text: #e4edf7;
+    --muted: #b0c1d3;
+    --success: #75d39a;
+    --danger: #ff9aa6;
+    --border: #3a526c;
+    --shadow: 0 10px 25px rgba(0, 0, 0, 0.24);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -25,6 +39,10 @@ body {
     color: var(--text);
 }
 
+:root[data-tema="oscuro"] body {
+    background: linear-gradient(135deg, #172638 0%, #24364a 100%);
+}
+
 main {
     width: min(90vw, 520px);
     background: var(--panel);
@@ -33,6 +51,22 @@ main {
     box-shadow: var(--shadow);
     padding: 2rem 1.5rem;
     text-align: center;
+}
+
+.alternador-tema {
+    display: block;
+    margin: 0 0 18px auto;
+    padding: 0.55rem 1rem;
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    background: var(--panel);
+    color: var(--text);
+    font-size: 0.9rem;
+    box-shadow: none;
+}
+
+.alternador-tema:hover {
+    background: var(--bg);
 }
 
 h1 {
@@ -90,6 +124,10 @@ button:hover {
     padding: 1rem;
 }
 
+:root[data-tema="oscuro"] #resultado {
+    background: #172536;
+}
+
 #resultado h2 {
     margin-top: 0;
 }
@@ -132,5 +170,10 @@ button:hover {
 
     button {
         flex: 1 1 100%;
+    }
+
+    .alternador-tema {
+        width: auto;
+        flex: 0 0 auto;
     }
 }
