@@ -13,12 +13,27 @@
     --blanco: #ffffff;
 }
 
+:root[data-tema="oscuro"] {
+    color-scheme: dark;
+    --azul: #78a9e3;
+    --azul-oscuro: #c4ddfb;
+    --azul-claro: #263d57;
+    --azul-borde: #3a526c;
+    --texto: #e4edf7;
+    --texto-suave: #b0c1d3;
+    --blanco: #1d2b3b;
+}
+
 body {
     margin: 0;
     padding: 48px 20px 64px;
     font-family: "Segoe UI", Arial, sans-serif;
     background: linear-gradient(180deg, #edf6ff 0, #f7fbff 280px, #f5f9fd 100%);
     color: var(--texto);
+}
+
+:root[data-tema="oscuro"] body {
+    background: linear-gradient(180deg, #172638 0, #1b2b3d 280px, #152333 100%);
 }
 
 .cabecera {
@@ -30,6 +45,12 @@ body {
     border: 1px solid rgba(211, 230, 251, 0.9);
     border-radius: 20px;
     box-shadow: 0 12px 32px rgba(58, 103, 151, 0.08);
+}
+
+:root[data-tema="oscuro"] .cabecera {
+    background: rgba(29, 43, 59, 0.9);
+    border-color: var(--azul-borde);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
 }
 
 .cabecera h1,
@@ -103,6 +124,40 @@ body {
     border-color: #b7d5f6;
 }
 
+:root[data-tema="oscuro"] .grupo-ejercicios a:hover,
+:root[data-tema="oscuro"] .grupo-ejercicios a:focus-visible,
+:root[data-tema="oscuro"] .grupo-javascript a:hover,
+:root[data-tema="oscuro"] .grupo-javascript a:focus-visible {
+    background: #365473;
+    border-color: #587a9f;
+}
+
+.alternador-tema {
+    margin-top: 18px;
+    padding: 9px 16px;
+    border: 1px solid var(--azul-borde);
+    border-radius: 999px;
+    background: var(--blanco);
+    color: var(--azul-oscuro);
+    font: inherit;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+
+.alternador-tema:hover,
+.alternador-tema:focus-visible {
+    background: var(--azul-claro);
+    border-color: var(--azul);
+    transform: translateY(-1px);
+}
+
+.alternador-tema:focus-visible {
+    outline: 3px solid rgba(120, 169, 227, 0.35);
+    outline-offset: 3px;
+}
+
 .formulario,
 .contenedor-inicio,
 .contenedor-horario {
@@ -124,6 +179,10 @@ body {
 
 .pie-pagina p {
     margin: 0;
+}
+
+:root[data-tema="oscuro"] .pie-pagina {
+    background: rgba(29, 43, 59, 0.86);
 }
 
 .cabecera-ejercicios {
@@ -195,6 +254,16 @@ body {
     transform: translateY(-2px);
 }
 
+:root[data-tema="oscuro"] .lista-ejercicios a {
+    background: #23364b;
+}
+
+:root[data-tema="oscuro"] .lista-ejercicios a:hover,
+:root[data-tema="oscuro"] .lista-ejercicios a:focus-visible {
+    background: #2b4562;
+    border-color: #52749a;
+}
+
 fieldset,
 .panel {
     background: var(--blanco);
@@ -202,6 +271,12 @@ fieldset,
     border-radius: 18px;
     padding: 28px;
     box-shadow: 0 12px 30px rgba(58, 103, 151, 0.08);
+}
+
+:root[data-tema="oscuro"] fieldset,
+:root[data-tema="oscuro"] .panel,
+:root[data-tema="oscuro"] .contenedor-horario {
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.18);
 }
 
 fieldset {
@@ -233,6 +308,13 @@ textarea {
     color: var(--texto);
     font: inherit;
     transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+:root[data-tema="oscuro"] input,
+:root[data-tema="oscuro"] textarea {
+    border-color: #455d75;
+    background: #172536;
+    color: var(--texto);
 }
 
 input:focus,
@@ -294,6 +376,10 @@ input[type="submit"]:hover {
     background: #f2f8ff;
 }
 
+:root[data-tema="oscuro"] .lista-inicio {
+    background: #23364b;
+}
+
 .lista-inicio li {
     padding: 3px 0;
 }
@@ -320,6 +406,10 @@ input[type="submit"]:hover {
     border: 1px solid var(--azul-borde);
     border-radius: 16px;
     box-shadow: 0 12px 30px rgba(58, 103, 151, 0.08);
+}
+
+:root[data-tema="oscuro"] .contenedor-horario {
+    background: var(--blanco);
 }
 
 .tabla-horario {
@@ -371,6 +461,36 @@ input[type="submit"]:hover {
     background: #cfe3f8;
     color: var(--azul-oscuro);
     letter-spacing: 0.12em;
+}
+
+:root[data-tema="oscuro"] .tabla-horario th,
+:root[data-tema="oscuro"] .tabla-horario td {
+    border-color: #3a4e63;
+}
+
+:root[data-tema="oscuro"] .tabla-horario thead th {
+    background: #2b4562;
+    color: #e4edf7;
+}
+
+:root[data-tema="oscuro"] .tabla-horario .hora {
+    background: #23364b;
+    color: #c0cede;
+}
+
+:root[data-tema="oscuro"] .rosa { background: #4a3039; color: #ffd5dc; }
+:root[data-tema="oscuro"] .rosa-claro { background: #49382f; color: #ffe0c9; }
+:root[data-tema="oscuro"] .verde { background: #294438; color: #c5f0d7; }
+:root[data-tema="oscuro"] .azul { background: #293f59; color: #d1e5ff; }
+:root[data-tema="oscuro"] .lila { background: #3b3655; color: #e2d9ff; }
+:root[data-tema="oscuro"] .morado { background: #353456; color: #dedcff; }
+:root[data-tema="oscuro"] .amarillo { background: #493f28; color: #ffedb5; }
+:root[data-tema="oscuro"] .gris { background: #303b48; color: #d5e0eb; }
+:root[data-tema="oscuro"] .blanco { background: #1d2b3b; color: #e4edf7; }
+
+:root[data-tema="oscuro"] .tabla-horario .recreo {
+    background: #344f6d;
+    color: #e4edf7;
 }
 
 @media (max-width: 700px) {
