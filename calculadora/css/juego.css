@@ -80,6 +80,13 @@ h1 {
     color: var(--muted);
 }
 
+.personaje {
+    display: block;
+    height: 220px;
+    width: auto;
+    margin: 1rem auto 0;
+}
+
 main > p:last-child a {
     color: var(--primary-dark);
     font-weight: 600;
