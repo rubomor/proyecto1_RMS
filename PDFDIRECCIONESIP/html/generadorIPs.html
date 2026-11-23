@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generador de IPs</title>
+    <link rel="stylesheet" href="../../css/estiloo.css">
+    <link rel="stylesheet" href="../estilos/generadorIPs.css">
+    <script src="../../js/tema.js" defer></script>
+    <script src="../scripts/generadorIPs.js"></script>
+</head>
+<body>
+
+    <header class="cabecera cabecera-ejercicios">
+        <h1>Generador de direcciones IP</h1>
+        <a class="enlace-inicio" href="../../index.html">Volver al inicio</a>
+        <br>
+        <button class="alternador-tema" type="button" aria-pressed="false">Modo oscuro</button>
+    </header>
+
+    <main class="panel generador-ip">
+
+        <p>Simulador de una red doméstica IPv4</p>
+
+        <section>
+            <h2>1. Generador de direcciones IP</h2>
+
+            <p>Red simulada: <strong>192.168.1.0/24</strong></p>
+
+            <div class="botones-ip">
+                <button type="button" onclick="mostrarDireccionRed()">Mostrar dirección de red</button>
+                <button type="button" onclick="mostrarPuertaEnlace()">Mostrar puerta de enlace</button>
+                <button type="button" onclick="generarIP()">Generar IP aleatoria</button>
+                <button type="button" onclick="mostrarBroadcast()">Mostrar broadcast</button>
+                <button type="button" onclick="mostrarMascara()">Mostrar máscara</button>
+            </div>
+
+            <p id="ip">0.0.0.0</p>
+        </section>
+
+    </main>
+
+    <footer class="pie-pagina">
+        <p>Proyecto de práctica de Lenguajes de marcas</p>
+    </footer>
+
+</body>
+</html>
